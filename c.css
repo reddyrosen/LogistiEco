@@ -1,0 +1,271 @@
+body{
+    /* main website structure */
+    background-image: url(wallpaper2.jpeg); /* wallpaper that the website color scheme is base on: black, white, orange, yellow/gold */
+    background-size: 100vw 100vh; /* stretch wallpaper to take full website width and height */
+    background-repeat: no-repeat; /* don't repeat the wallpaper and keep it stretched */
+    background-attachment: fixed; /* keep wallpaper stretched and cover the whole website | Note : using scroll instead of fixed wimax-width: 1000px; */
+    font-family: Verdana, Geneva, Tahoma, sans-serif; /* main display font and easy to read */
+    color: white; /* main text color */
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+p{ color: white;}
+.main-content{
+    /* the main container that contains all website content */
+    flex: 1; /* allow content to expand and fill available space */
+    padding: 20px; /* give inner padding to prevent content from being close to the borders */
+}
+.nav-brand{
+    /* website name/logo 'uni-code' decoration */
+    text-shadow: 2px 2px 4px black; /* gives black shadow behind the logo */
+    text-decoration: none; /* removed the defualt link decoration to prevent the logo from lookinh like a typical link */
+    color: white; /* logo color */
+    text-align: center; /* keep the logo centered */
+    font-family: 'papyrus', sans-serif; /* logo font paper like and stylish */
+    font-size: x-large; /* give logo a bigger size */
+    display: flex; /* use flexbox to center the logo vertically and horizontally */
+    min-height: 100vh; /* ensure full viewport height */
+}
+
+/* SIDEBAR STYLING */
+.nav-brand > div:first-child {
+    background: rgba(20, 20, 15, 0.4); /* semi-transparent dark glassy background */
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.3), 8px 0 32px 0 rgba(31, 38, 135, 0.2); /* glass effect with inset shadow */
+    border-right: 1px solid rgba(177, 149, 47, 0.2); /* subtle gold border on right */
+    backdrop-filter: blur(10px); /* blur effect for glass morphism */
+}
+/* navigation bar display */
+nav ul {
+    list-style-type: none; /* Remove default list decoration */
+    display: flex; /* align list items in a row */
+    justify-content: center; /* Center the list items */ 
+}
+
+nav ul li {
+    margin: 0 15px; /* Space between list items */
+    position: relative; /* For dropdown positioning to appear correctly */
+}
+
+
+
+nav ul li a {
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline from links */
+    font-size: 18px; /* Font size for the links */
+}
+nav ul li a:hover {
+    color: gold; /* Change color on hover */
+}
+
+.dropdown-menu {
+    display: none; /* Initially hide the dropdown menu untill hover */
+    position: absolute; /* Position it relative to the parent li */
+    top: 100%; /* Position the dropdown menu below the parent li */
+    left: 50%; /* Center the dropdown menu horizontally */
+    transform: translateX(-50%); /* Center the dropdown menu below courses */
+    text-align: center; /* Center the text in the dropdown menu */
+    box-sizing: border-box; /* prevent the dropdown menu from overflowing outside its frame */
+    padding: 0%; /* Remove default padding */ 
+    margin: 0; /* Remove default margin */
+    background-color: black; /* Background color of the dropdown menu */
+    border: 1px solid rgba(177, 149, 47, 0.839); /* a thin solid semi-transparent gold border around the dropdown menu */
+    border-radius: 5px; /* Rounded corners for the dropdown menu */
+    min-width: 160px; /* Minimum width of the dropdown menu */
+    z-index: 999; /* Ensure the dropdown menu appears above other elements */
+    opacity: 0; /* Initially hide the dropdown menu */
+    visibility: hidden; /* Hide the dropdown menu untill hover */
+}
+
+.dropdown-parent:hover .dropdown-menu {
+    display: block; /* Show the dropdown menu on hover */
+    opacity: 1; /* make the dropdown menu fully visible */
+    visibility: visible; /* make the dropdown menu visible */
+}
+
+
+.dropdown-menu li {
+    padding: 10px; /* Padding for each list item in the dropdown menu */
+    border-bottom: 1px solid rgba(177, 149, 47, 0.839); /* a thin solid semi-transparent gold border between each list item */
+}
+.dropdown-menu li:last-child {
+    border-bottom: none; /* Remove the border from the last list item */
+}
+
+
+
+.glass-container{
+    /* style of all containers used with website sections */
+    padding: 20px; /* gives inner padding from all direction to prevent text from being so close to the borders */
+    margin-top: 20px; /* separate each container with an empty space */
+    background: rgba(52, 52, 40, 0.1); /* give the border a dark gray glossy semi-transparent background color */
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); /* give the container a semi-transparent dark blue shadow */
+    border-radius: 10px; /* give the border rounded corners */
+    border: 1px solid rgba(255, 255, 255, 0.18); /* container border thin solid and semi-transeparent white border to easily blend in with the colors*/
+    width: 100%; /* take full available allowed window width */
+    box-sizing: border-box; /* prevent  the container from extending outside the page and being very close to the window borders */
+    color: wheat;
+}
+table{
+    /* for tables used in the admin page */
+    background: rgba(52, 52, 40, 0.1); /* give the table a dark gray glossy semi-transparent background color */
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); /* give the table a semi-transparent dark blue shadow */
+    border-radius: 10px; /* give the table rounded corners */
+    border: 1px solid rgba(255, 255, 255, 0.18); /* table border thin solid and semi-transeparent white border to easily blend in with the colors*/
+    width: 100%; /* take full available allowed window width */
+    box-sizing: border-box; /* prevent the table from extending outside the page and being very close to the window borders */
+    color: wheat;
+}
+
+/* Compatible with Bootstrap cards */
+.glass-container.card {
+    background: rgba(52, 52, 40, 0.1);
+    color: wheat;
+}
+
+.center{
+    /* for headings and titles that I want to be centered */
+    text-align: center; /* keep text centered */
+    color: orange; /* make text orange */
+    font-family: cursive; /* font used for titles and headers similar to the comic sans font */
+    letter-spacing: 10px; /* put a small space between letters like t h i s to give it a unique  look */
+}
+
+h3{
+    /* for subheadings using h3*/
+    font-weight: 300; /* make font thin */
+    text-decoration:  underline chocolate; /* put a drak orange line below text */
+}
+
+.video-container{
+    /* for the divs around the videos */
+    display: inline; /*keep all videos on the same line */
+    margin-right: 10px; /* separate videos with an empty space */
+
+}
+
+div iframe{
+    /* how the video will be displayed */
+    width: 300px; /* video frame width */
+    height: 200px; /* video frame height */
+    border-radius: 10px; /* give the video frame rounded corners */ 
+    margin-bottom: 20px; /* keep a space between the videos and the buttom of the container */
+}
+
+#website{
+    /* for the embedded  website frame */
+    border-radius: 10px; /* give the website rounded corners */
+    margin-bottom: 20px; /* keep a space between the website and container */
+}
+
+.button{
+    /* for displaying any buttons */
+    background: rgba(9, 7, 0, 0.848); /* give buttons a semi-transparent black background */
+    border-radius: 500px; /* make buttons rounded */
+    border: 1px solid gold; /* give buttons a thin solid gold borders */
+    padding: 10px 20px; /* keep text exactly at the center of the button */
+    font-size: 16px; /* adjust text size */
+    color: white; /* make text color white */
+    font-family: monospace; /* a consule font to give the text technical feel */
+}
+   
+.button:hover{
+    /* new style for buttons on hover */
+    background: gold; /* make the background turn gold when hovered by the mouse */
+    font-size: large; /* increase text size to give a feel of motion to the button on hover */
+    color: black; /* make text black to appear clearly on the gold background */
+    font-weight: bold; /* make text bold to appear more clearly on the gold background */
+}
+header a:hover{
+    /* when hovering over the website logo/name */
+    color: #eabc07; /* change logo color from white to darker gold */
+}
+
+.question{
+    /* for displaying quiz questions */
+    margin-bottom: 10px; /* separate questions from choices with an empty space */
+    margin-top: 10px; /* separate each new question with an empty space */
+    font-size: medium; /* adjust text size */
+    letter-spacing: 5px; /* add spaces between question letters to make it different from the answers */
+    font-family: cursive; /* similar font to headers ad it looks good with letter spacing */
+}
+.choice{
+    /* for displaying the choices */
+    margin-bottom: 10px; /* separate each choice with an empty space */
+    font-family: 'Courier New', Courier, monospace;  /* a consule-like font to give the text technical feel */
+}
+.choice:hover{
+    /* action for hovering onn the choices */
+     color: gold; /* make choices turn gold on hover to give a feeling of being interactive */
+}
+
+/* DROPDOWN & SELECT STYLING - Glass Theme */
+.form-select {
+    background-color: rgba(52, 52, 40, 0.2); /* semi-transparent dark background */
+    color: wheat; /* text color */
+    border: 1px solid rgba(177, 149, 47, 0.4); /* gold border */
+    border-radius: 8px; /* rounded corners */
+    padding: 10px 15px; /* padding for comfort */
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.form-select:hover {
+    border-color: rgba(177, 149, 47, 0.7); /* brighter gold on hover */
+    box-shadow: 0 0 10px rgba(177, 149, 47, 0.2);
+}
+
+.form-select:focus {
+    background-color: rgba(52, 52, 40, 0.3);
+    color: wheat;
+    border-color: gold;
+    box-shadow: 0 0 15px rgba(177, 149, 47, 0.3), inset 0 0 5px rgba(177, 149, 47, 0.1);
+    outline: none;
+}
+
+.form-select option {
+    background-color: #2a2a20; /* dark background for options */
+    color: wheat; /* text color */
+    padding: 10px;
+}
+
+.form-select option:hover {
+    background: rgba(177, 149, 47, 0.3);
+    color: gold;
+}
+
+/* Form Labels */
+.form-label {
+    color: gold; /* labels in gold */
+    font-weight: 600;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.85rem;
+}
+
+/* Input Fields */
+.form-control {
+    background-color: rgba(52, 52, 40, 0.2);
+    color: wheat;
+    border: 1px solid rgba(177, 149, 47, 0.4);
+    border-radius: 8px;
+    padding: 10px 15px;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    background-color: rgba(52, 52, 40, 0.3);
+    color: wheat;
+    border-color: gold;
+    box-shadow: 0 0 15px rgba(177, 149, 47, 0.3), inset 0 0 5px rgba(177, 149, 47, 0.1);
+    outline: none;
+}
+
+.form-control::placeholder {
+    color: rgba(245, 222, 179, 0.5);
+}
+
+
+                                                      /* CSS code and design by Reddy */

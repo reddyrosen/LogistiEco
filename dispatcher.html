@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dispatcher Dashboard</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="c.css">
+</head>
+
+
+
+
+
+<body>
+
+<div class="nav-brand">
+
+    <!-- SIDEBAR -->
+    <div class="bg-dark text-white p-3" style="min-width: 220px; height: 100vh; overflow-y: auto;">
+        <h4 class="text-center mb-4">LogistiEco</h4>
+        <hr>
+
+        <ul class="nav flex-column">
+
+            <li class="nav-item mb-2">
+                <a href="customer.html" class="nav-link text-white">Customer</a>
+            </li>
+
+            <li class="nav-item mb-2">
+                <a href="dispatcher.html" class="nav-link text-white">Dispatcher</a>
+            </li>
+
+            <li class="nav-item mb-2">
+                <a href="admin.html" class="nav-link text-white">Admin</a>
+            </li>
+
+            <li class="nav-item mb-2">
+                <a href="driver.html" class="nav-link text-white">Driver</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+
+        <div class="container-fluid">
+
+    <!-- QUICK ACTIONS -->
+    <div class="row g-4 mb-4">
+
+        <div class="col-md-3">
+            <div class="glass-container card">
+                <h5>Create Delivery</h5>
+                <button class="button">New Delivery</button>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="glass-container card">
+                <h5>Assign Driver</h5>
+                <button class="button">Assign</button>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="glass-container card">
+                <h5>Optimize Route</h5>
+                <button class="button">Optimize</button>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="glass-container card">
+                <h5>Send Notification</h5>
+                <button class="button">Notify</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ORDERS TABLE -->
+    <div class="glass-container">
+        <h4>Orders</h4>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Customer</th>
+                    <th>Status</th>
+                    <th>Driver</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>#001</td>
+                    <td>Ali</td>
+                    <td>Pending</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>#002</td>
+                    <td>Sara</td>
+                    <td>Assigned</td>
+                    <td>Driver 1</td>
+                </tr>
+                <tr>
+                    <td>#003</td>
+                    <td>Omar</td>
+                    <td>Delivered</td>
+                    <td>Driver 2</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- ASSIGN DRIVER -->
+    <div class="glass-container">
+        <h4>Assign Driver</h4>
+
+        <div class="row g-3">
+            <div class="col-md-4">
+                <label class="form-label">Order</label>
+                <select class="form-select">
+                    <option>#001</option>
+                    <option>#002</option>
+                </select>
+            </div>
+
+            <div class="col-md-4">
+                <label class="form-label">Driver</label>
+                <select class="form-select">
+                    <option>Driver 1</option>
+                    <option>Driver 2</option>
+                </select>
+            </div>
+
+            <div class="col-md-4 d-flex align-items-end">
+                <button class="button w-100">Assign</button>
+            </div>
+        </div>
+
+    </div>
+
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
